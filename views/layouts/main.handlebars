@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="./assets/css/style.css">
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
+  <title>Technically Speaking</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-<body>
-  
-<nav>
-  <div class=""><a href="/home">Home</a><a href="/dashboard">Dashboard</a><a href="/logout">Logout</a></div>
-  <h1>The Tech Blog</h1>
-</nav>
-<div class="main">  </div>
 
+  <div class="wrapper">
+    <header>
+        <nav class="navbar mt-2">
+            {{#if loggedIn}}
+            <a href="/" class="navbar-item is-hoverable pt-1">Home Page</a>
+            <a href="/dashboard" class="navbar-item is-hoverable pt-1">Dashboard</a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable is-rounded pt-1 mr-4">Create Post</a>
+           
+            {{else}}
+            <a href="/" class="navbar-item is-hoverable pt-1">Home Page</a>
+           
+            {{/if}}
+        </nav>
+        <div class="level-item">
+    
+      <br>
+      <div>
+       
+{{#if loggedIn}}
+       <button id="logout" class="button is-danger is-outlined justify-content-center py-3">Log-Out</button>
+       {{else }}
+       <a href="/login" class="button is-success is-outlined py-4">Login</a>
+       {{/if}}
+      </div>
 
-{{{ body }}}
+    </header>
+    <div>
+      <div id="blogtitle">
+    <h1 class="has-text-black px-3 py-3 has-text-weight-bold" id="techblog">MVC:A Tech Blog</h1>
+      </div>
+      <div class="field has-addons" id="Lobtn" class="col-6">
+        {{!-- <form class="search-form"> --}}
+        <p class="control">
+          <input class="input" type="text" placeholder="Find a post" data-search>
+        </p>
+        <p class="control">
+          <button class="button is-link is-outlined">
+            Search
+          </button>
+        </p>
+        {{!-- </form> --}}
+      </div>
+    </div>
+    <main>
+            {{{ body }}}
+    </main>
 
-
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered is-centered">
+            <p>
+            <a href="/">Home Page</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">Dashboard</a> | 
+            <a href="/dashboard/create/">New Post</a>
+            {{else}}
+             | <a href="/login/">Login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+  </div>
+    </footer>
+  </div>
 
 {{#if loggedIn}}
-
-  <script src="./assets/js/script.js"></script>
+<script src="/javascript/logout.js"></script>
+{{/if}}
+<script src="/javascript/search.js"></script>
 </body>
+
 </html>
