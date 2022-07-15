@@ -9,7 +9,7 @@
 [Heroku Site](https://tech-blog-mx.herokuapp.com/)
 ### Application Screenshot
 
-![](images/mvc-tech-blog.png)
+![Tech Blog Image](https://raw.githubusercontent.com/Mcnoor/Challenge-Module14-BC/main/Techblog.png)
   
 ### User Story
 
