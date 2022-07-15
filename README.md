@@ -6,7 +6,7 @@
 
 ### Application Deployment
 
-
+[Heroku Site](https://tech-blog-mx.herokuapp.com/)
 ### Application Screenshot
 
 ![](images/mvc-tech-blog.png)
