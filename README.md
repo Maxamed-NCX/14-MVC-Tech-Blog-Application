@@ -64,5 +64,5 @@ THEN I am automatically signed out of the site
 ```text
 DB_NAME='tech_blog_db'
 DB_USER='root'
-DB_PW='XXX'
+DB_PW='XXXXXXXX'
 ```
